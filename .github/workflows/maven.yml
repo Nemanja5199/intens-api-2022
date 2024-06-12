@@ -1,4 +1,4 @@
-name: CI
+name: PR pipeline
 
 on:
   pull_request:
