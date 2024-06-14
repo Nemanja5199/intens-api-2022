@@ -42,11 +42,11 @@ jobs:
       runs-on: self-hosted
       steps:
       - name: Pull docker image
-        run: docker pull integrationninjas/go-app:latest
+        run: docker pull ${{ secrets.DOCKER_USERNAME}}/my-app:latest
       - name: Delete old container
-        run: docker rm -f go-app-container  
+        run: docker rm -f my-app-container  
       - name: Run docker container          
-        run: docker run -d -p 4040:4040 --name go-app-container integrationninjas/go-app
+        run: docker run -d -p 4040:4040 --name my-app-container ${{ secrets.DOCKER_USERNAME}}/my-app:latest
       
 
     
