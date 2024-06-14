@@ -46,7 +46,7 @@ jobs:
       - name: Delete old container
         run: docker rm -f my-app-container  
       - name: Run docker container          
-        run: docker run -d -p 4040:4040 --name my-app-container ${{ secrets.DOCKER_USERNAME}}/my-app:latest
+        run: docker run -d -p 8080:8080 --name my-app-container ${{ secrets.DOCKER_USERNAME}}/my-app:latest
       
 
     
